@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Outfit:wght@400;600;800;900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+  background-color: #0d0e15;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1b1c2a 0%, #0d0e15 100%);
+  background-size: cover;
+}
+
+/* Hands Shake Animation */
+@keyframes shakeLeft {
+  0% { transform: rotate(0deg) translateY(0); }
+  20% { transform: rotate(-10deg) translateY(-10px); }
+  40% { transform: rotate(0deg) translateY(0); }
+  60% { transform: rotate(-10deg) translateY(-10px); }
+  80% { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+@keyframes shakeRight {
+  0% { transform: rotate(0deg) scaleX(-1) translateY(0); }
+  20% { transform: rotate(10deg) scaleX(-1) translateY(-10px); }
+  40% { transform: rotate(0deg) scaleX(-1) translateY(0); }
+  60% { transform: rotate(10deg) scaleX(-1) translateY(-10px); }
+  80% { transform: rotate(0deg) scaleX(-1) translateY(0); }
+  100% { transform: rotate(0deg) scaleX(-1) translateY(0); }
+}
+
+.shake-left {
+  animation: shakeLeft 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.shake-right {
+  animation: shakeRight 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Neon glow classes */
+.glow-blue {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.glow-pink {
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.5);
+}
+
+/* Custom transitions and loader */
+.loader {
+  border-top-color: #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.button-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-hover:hover {
+  transform: translateY(-2px);
+}
+
+.button-hover:active {
+  transform: translateY(0);
+}
