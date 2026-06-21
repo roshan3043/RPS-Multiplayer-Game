@@ -2,6 +2,8 @@
 
 A real-time, online multiplayer Rock-Paper-Scissors game replica of the tutorial by **CyberWolves**. It features a modern dark UI/HUD, room synchronization, CSS-based physical hand-shaking animations, and keyboard shortcuts.
 
+### 🔗 Live Link: [https://rps-multiplayer-game.vercel.app/](https://rps-multiplayer-game.vercel.app/)
+
 ---
 
 ## 🛠️ Tech Stack
