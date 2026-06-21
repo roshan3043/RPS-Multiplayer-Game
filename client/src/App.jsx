@@ -15,7 +15,7 @@ export default function App() {
   // 1. Establish Socket.io connection and parse invite links
   useEffect(() => {
     // Determine server host (fallback to localhost:5000 in dev)
-    const socketHost = `${window.location.protocol}//${window.location.hostname}:5000`;
+    const socketHost = import.meta.env.VITE_SERVER_URL || `${window.location.protocol}//${window.location.hostname}:5000`;
     console.log('Connecting to Socket.io:', socketHost);
     
     const s = io(socketHost);
